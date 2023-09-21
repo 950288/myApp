@@ -27,6 +27,7 @@ jobs:
       - name: Build
         run: |
           npm install -g cordova
+          cordova platform add android
           cordova build android
           cd platforms/android/app/build/outputs/apk
           ls
