@@ -23,12 +23,15 @@ jobs:
         with:
           node-version: '16'
       - name: Install dependencies
-        run: npm install 
-      - name: Build
         run: |
+          npm install
           npm install -g cordova
           cordova platform add android
+      - name: Build
+        run: |
           cordova build android
+      - name: Check
+        run: |
           cd platforms/android/app/build/outputs/apk
           ls
         
