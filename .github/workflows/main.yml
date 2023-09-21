@@ -32,7 +32,12 @@ jobs:
           cordova build android
       - name: Check
         run: |
-          cd platforms/android/app/build/outputs/apk
+          cd platforms/android/app/build/
           ls
+      - name: Upload Linux zip
+        uses: actions/upload-artifact@v2 
+        with:
+          name: test
+          path: ./platforms/android/app/build/
         
         
