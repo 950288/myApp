@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2 
         with:
           name: test
-          path: ./platforms/android/app/build/test/outputs/apk/debug
+          path: ./platforms/android/app/build/outputs/apk/debug
       - name: build for release
         run: |
           cordova build android --release
