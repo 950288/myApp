@@ -37,7 +37,7 @@ jobs:
           path: ./platforms/android/app/build/outputs/apk/debug
       - name: build for release
         run: |
-          cordova build android --release
+          cordova build android --release --prod -- --packageType=apk
           ls platforms/android/app/build/outputs/
       - name: Upload android-release-unsigned.apk
         uses: actions/upload-artifact@v2 
