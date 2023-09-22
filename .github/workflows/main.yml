@@ -38,6 +38,6 @@ jobs:
         uses: actions/upload-artifact@v2 
         with:
           name: test
-          path: ./platforms/android/app/build/
+          path: ./platforms/android/app/build/tesp/outputs/apk/debug/app-debug.apk
         
         
