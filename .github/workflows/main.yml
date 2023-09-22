@@ -33,16 +33,17 @@ jobs:
       - name: Upload app-debug.apk
         uses: actions/upload-artifact@v2 
         with:
-          name: test
+          name: app-debug.apk
           path: ./platforms/android/app/build/outputs/apk/debug
       - name: build for release
         run: |
           cordova build android --release
-          ls
+          ls platforms/android/app/build/outputs/
       - name: Upload android-release-unsigned.apk
         uses: actions/upload-artifact@v2 
         with:
-          name: test
-          path: ./platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
+          name: android-release-unsigned.apk
+          path: ./platforms/android/app/build/outputs/apk
+          # path: ./platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
         
         
