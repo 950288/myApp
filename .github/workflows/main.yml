@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v2 
         with:
           name: android-release-unsigned.apk
-          path: ./platforms/android/app/build/outputs/apk
+          path: ./platforms/android/app/build/outputs/bundle/release/
           # path: ./platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
         
         
