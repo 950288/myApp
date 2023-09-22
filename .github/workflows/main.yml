@@ -43,6 +43,6 @@ jobs:
         uses: actions/upload-artifact@v2 
         with:
           name: test
-          path: ./android-apk/android-release-unsigned.apk
+          path: ./platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk
         
         
