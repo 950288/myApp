@@ -25,6 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g pnpm
+          pnpm setup
           pnpm install
           pnpm install -g cordova
           cordova platform add android
