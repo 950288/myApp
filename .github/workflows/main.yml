@@ -30,7 +30,7 @@ jobs:
           cordova platform add android
       - name: Build for fontend
         run: |
-          pnpm run install
+          pnpm run build
       - name: Build for debug
         run: |
           cordova build android
