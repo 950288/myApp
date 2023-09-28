@@ -19,13 +19,16 @@ jobs:
       #     java-version: 1.8
       #     # 用 1.8 版本覆盖环境中自带的 Java 11 版本
       - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+        - uses: actions/checkout@v3
+        - uses: pnpm/action-setup@v2
+          with:
+            version: 8
+        - uses: actions/setup-node@v3
+          with:
+            node-version: 18
+            cache: 'pnpm'
       - name: Install dependencies
         run: |
-          npm install -g pnpm
-          pnpm setup
           pnpm install
           pnpm install -g cordova
           cordova platform add android
