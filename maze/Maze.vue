@@ -34,7 +34,7 @@
           </button>
         </div>
         <div class="answer_item">
-          <button ref="C" :id="Q.C" v-on:click="CheckAnswer(C, Q)">
+          <button ref="C" :id="Q.C" v-on:click="CheckAnswer(C, Q)" v-if="Q.C">
             <span class="DOT">C</span>{{ Q.C }}
           </button>
         </div>
@@ -807,6 +807,7 @@ body,
     .Q_A {
       width: 80%;
       height: unset;
+      font-size: 1.5em;
 
       .question {
         padding: 1.5rem;
